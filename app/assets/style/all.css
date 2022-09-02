@@ -8,12 +8,31 @@
     font-family: "Noto Sans TC", sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    background-color: #F0F0F0;
+    background-color: #f0f0f0;
   }
 }
 
-@layer utilities{
-  .squada{
-    font-family: 'Squada One', cursive;
+@layer utilities {
+  .squada {
+    font-family: "Squada One", cursive;
   }
-} 
+  .writing_lr {
+    writing-mode: vertical-lr;
+  }
+  .btn {
+    @apply squada w-[132px] block text-lg leading-[1.0555] py-2 px-12 border;
+  }
+  .btn-white {
+    @apply bg-white ml-auto;
+  }
+  .triangle {
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom:0;
+    right:0;
+    border-style: solid;
+    border-width: 0 0 16px 16px;
+    border-color: transparent transparent #E6553B transparent;
+  }
+}
