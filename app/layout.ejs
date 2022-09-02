@@ -1,26 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title><%- title %></title>
+    <link rel="stylesheet" href="./assets/style/all.css" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title><%- title %></title>
-  <link rel="stylesheet" href="./assets/style/all.css">
-</head>
+    <!--外部字型 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Squada+One&display=swap"
+      rel="stylesheet"
+    />
 
-<body>
-  <header class="header">
-    這是 header
-  </header>
+    <!-- font_awesome -->
+    <script
+      src="https://kit.fontawesome.com/8418f44bd9.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-  <%- contents %>
+  <body>
+    <header class="py-4 md:py-0 md:border-b">
+      <!-- 手機版header -->
+      <div class="container flex justify-between items-center md:hidden">
+        <a href="index.html"
+          ><img
+            class="w-[85px]"
+            src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week8-202207/logo.svg"
+            alt="art_nft"
+        /></a>
+        <div class="flex">
+          <button>
+            <i class="fa-solid fa-magnifying-glass text-lg mr-6"></i>
+          </button>
+          <button>
+            <i class="fa-solid fa-bars text-lg cursor-pointer"></i>
+          </button>
+        </div>
+      </div>
 
-  <footer class="footer">
-    footer
-  </footer>
-  <script src="./assets/js/vendors.js"></script>
-  <script src="./assets/js/all.js"></script>
-</body>
+      <!-- 電腦版header -->
+      <div class="hidden container justify-between items-center md:flex">
+        <a href="index.html"
+          ><img
+            src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week8-202207/logo.svg"
+            alt="art_nft"
+        /></a>
+        <div class="flex">
+          <!-- 文字搜尋欄 -->
+          <div class="flex items-center px-6 py-10 border-l xl:px-12">
+            <p class="text-gray xl:w-[288px]">搜尋作品名稱、藝術家名稱</p>
+            <button>
+              <i class="fa-solid fa-magnifying-glass text-2xl ml-6"></i>
+            </button>
+          </div>
+          <!-- 探索鈕  -->
+          <a href="#" class="border-l px-6 py-10 xl:px-12">探索</a>
+          <!-- 市值鈕  -->
+          <a href="#" class="border-l px-6 py-10 xl:px-12">市值</a>
+          <!-- 錢包鈕  -->
+          <a href="#" class="border-l px-6 py-10 xl:px-12"><i class="fa-solid fa-wallet text-2xl"></i></a>
+        </div>
+      </div>
+    </header>
 
+    <%- contents %>
+
+    <footer class="bg-secondary text-center py-6">
+      <p>© ART NFT. All Rights Reserved</p>
+    </footer>
+    <script src="./assets/js/vendors.js"></script>
+    <script src="./assets/js/all.js"></script>
+  </body>
 </html>
