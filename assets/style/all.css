@@ -653,10 +653,10 @@ select {
     max-width: 991px;
   }
 }
-@media (min-width: 1440px) {
+@media (min-width: 1321px) {
 
   .container {
-    max-width: 1440px;
+    max-width: 1321px;
   }
 }
 .relative {
@@ -691,11 +691,20 @@ select {
 .hidden {
   display: none;
 }
+.h-full {
+  height: 100%;
+}
+.h-auto {
+  height: auto;
+}
 .w-full {
   width: 100%;
 }
 .w-\[85px\] {
   width: 85px;
+}
+.w-1\/2 {
+  width: 50%;
 }
 .cursor-pointer {
   cursor: pointer;
@@ -704,6 +713,11 @@ select {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+.items-stretch {
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
 }
 .justify-center {
   -webkit-box-pack: center;
@@ -765,6 +779,9 @@ select {
 }
 .pb-\[137px\] {
   padding-bottom: 137px;
+}
+.pb-6 {
+  padding-bottom: 1.5rem;
 }
 .text-center {
   text-align: center;
@@ -920,11 +937,15 @@ select {
     }
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: 1321px) {
 
     .lg\:container {
-      max-width: 1440px;
+      max-width: 1321px;
     }
+  }
+
+  .lg\:bottom-1 {
+    bottom: 0.25rem;
   }
 
   .lg\:mt-10 {
@@ -935,6 +956,10 @@ select {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+
+  .lg\:h-\[340px\] {
+    height: 340px;
   }
 
   .lg\:w-full {
@@ -949,13 +974,57 @@ select {
     width: 50%;
   }
 
+  .lg\:flex-row-reverse {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+
+  .lg\:flex-col {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
   .lg\:flex-wrap {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
 
+  .lg\:justify-between {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
   .lg\:border {
     border-width: 1px;
+  }
+
+  .lg\:px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .lg\:pt-20 {
+    padding-top: 5rem;
+  }
+
+  .lg\:pb-6 {
+    padding-bottom: 1.5rem;
+  }
+
+  @media (min-width: 991px) {
+
+    .lg\:lg\:pb-6 {
+      padding-bottom: 1.5rem;
+    }
+  }
+
+  .lg\:pt-8 {
+    padding-top: 2rem;
   }
 
   .lg\:text-4xl {
@@ -965,6 +1034,10 @@ select {
 
   .lg\:text-\[32px\] {
     font-size: 32px;
+  }
+
+  .lg\:leading-\[1\.4375\] {
+    line-height: 1.4375;
   }
 
   .group:hover .lg\:group-hover\:border-black {
@@ -986,7 +1059,7 @@ select {
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1321px) {
 
   .xl\:w-\[288px\] {
     width: 288px;
