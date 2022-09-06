@@ -1,1 +1,58 @@
-/*# sourceMappingURL=style.css.map */
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper {
+  width: auto;
+  height: auto;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.swiper-wrapper {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.swiper-slide-next {
+  height: 439px !important;
+}
+
+.swiper-pagination-bullet {
+  border-radius: 0% !important;
+  background-color: #000000 !important;
+  opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+  border-radius: 0% !important;
+  width: 16px !important;
+  background-color: #E6553B !important;
+}/*# sourceMappingURL=style.css.map */

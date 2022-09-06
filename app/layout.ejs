@@ -7,7 +7,7 @@
     <title><%- title %></title>
     <!-- css -->
     <link rel="stylesheet" href="./assets/style/all.css" />
-    <link rel="stylesheet" href="assets/style/style.css">
+    <link rel="stylesheet" href="assets/style/style.css" />
 
     <!--外部字型 -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -16,9 +16,18 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Squada+One&display=swap"
       rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
 
     <!-- font_awesome -->
     <script
@@ -67,7 +76,9 @@
           <!-- 市值鈕  -->
           <a href="#" class="border-l px-6 py-10 font-bold xl:px-12">市值</a>
           <!-- 錢包鈕  -->
-          <a href="#" class="border-l px-6 py-10 xl:px-12"><i class="fa-solid fa-wallet text-2xl"></i></a>
+          <a href="#" class="border-l px-6 py-10 xl:px-12"
+            ><i class="fa-solid fa-wallet text-2xl"></i
+          ></a>
         </div>
       </div>
     </header>
@@ -79,5 +90,33 @@
     </footer>
     <script src="./assets/js/vendors.js"></script>
     <script src="./assets/js/all.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        // autoplay: {
+        //   delay: 5000,
+        // },
+        breakpoints: {
+          // when window width is >= 320px
+          375: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          // when window width is >= 640px
+          991: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+          },
+        },
+      });
+    </script>
   </body>
 </html>

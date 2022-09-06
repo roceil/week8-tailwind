@@ -19,6 +19,9 @@
   .paytone {
     font-family: 'Paytone One', sans-serif;
   }
+  .h2{
+    @apply squada text-[32px] leading-[1.0625] mb-2
+  }
   .writing_lr {
     writing-mode: vertical-lr;
   }
