@@ -44,4 +44,10 @@
   .border-black {
     border-color: transparent transparent black transparent;
   }
+  .border-primary {
+    border-color: transparent transparent #E6553B transparent;
+  }
+  .grayscale{
+    -webkit-filter:grayscale(1);
+    }
 }
