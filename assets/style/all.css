@@ -1068,110 +1068,110 @@ select {
 
 /* 字型載入 */
 
+/* masonry */
+.grid {
+  margin-left: -12px;
+  margin-right: -12px;
+}
+
+.grid-sizer,
+.grid-item {
+  width: 50%;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+@media (min-width: 991px) {
+  .grid-sizer,
+  .grid-item {
+    width: 33.33333%;
+  }
+}
+@media (min-width: 1440px) {
+  .grid-sizer,
+  .grid-item {
+    width: 25%;
+  }
+}
 .before\:absolute::before {
   content: var(--tw-content);
   position: absolute;
 }
-
 .before\:top-\[110px\]::before {
   content: var(--tw-content);
   top: 110px;
 }
-
 .before\:left-0::before {
   content: var(--tw-content);
   left: 0px;
 }
-
 .before\:top-\[121px\]::before {
   content: var(--tw-content);
   top: 121px;
 }
-
-.before\:h-\[4px\]::before {
-  content: var(--tw-content);
-  height: 4px;
-}
-
-.before\:h-\[1px\]::before {
-  content: var(--tw-content);
-  height: 1px;
-}
-
 .before\:h-\[2px\]::before {
   content: var(--tw-content);
   height: 2px;
 }
-
+.before\:h-\[1px\]::before {
+  content: var(--tw-content);
+  height: 1px;
+}
 .before\:w-full::before {
   content: var(--tw-content);
   width: 100%;
 }
-
 .before\:bg-black::before {
   content: var(--tw-content);
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
-
 .before\:content-\[\'\'\]::before {
   --tw-content: '';
   content: var(--tw-content);
 }
-
 .after\:absolute::after {
   content: var(--tw-content);
   position: absolute;
 }
-
 .after\:bottom-\[-40px\]::after {
   content: var(--tw-content);
   bottom: -40px;
 }
-
 .after\:left-0::after {
   content: var(--tw-content);
   left: 0px;
 }
-
 .after\:bottom-\[-48px\]::after {
   content: var(--tw-content);
   bottom: -48px;
 }
-
 .after\:h-\[1px\]::after {
   content: var(--tw-content);
   height: 1px;
 }
-
 .after\:w-full::after {
   content: var(--tw-content);
   width: 100%;
 }
-
 .after\:bg-black::after {
   content: var(--tw-content);
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
-
 .after\:content-\[\'\'\]::after {
   --tw-content: '';
   content: var(--tw-content);
 }
-
 .group:hover .group-hover\:block {
   display: block;
 }
-
 .group:hover .group-hover\:opacity-50 {
   opacity: 0.5;
 }
-
 .group:hover .group-hover\:opacity-100 {
   opacity: 1;
 }
-
 @media (min-width: 769px) {
 
   .md\:flex {
@@ -1197,7 +1197,6 @@ select {
     padding-bottom: 0px;
   }
 }
-
 @media (min-width: 991px) {
 
   .lg\:container {
@@ -1509,7 +1508,6 @@ select {
     border-color: transparent transparent black transparent;
   }
 }
-
 @media (min-width: 1321px) {
 
   .xl\:-mx-3 {
