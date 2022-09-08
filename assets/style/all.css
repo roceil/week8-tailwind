@@ -684,32 +684,11 @@ select {
 .right-2 {
   right: 0.5rem;
 }
-.top-\[106\%\] {
-  top: 106%;
-}
-.top-\[0\] {
-  top: 0;
-}
-.bottom-\[0\] {
-  bottom: 0;
-}
-.bottom-\[16px\] {
-  bottom: 16px;
-}
-.bottom-\[16px\+24px\] {
-  bottom: 16px + 24px;
-}
-.bottom-\[40px\] {
-  bottom: 40px;
-}
 .bottom-10 {
   bottom: 2.5rem;
 }
-.bottom-0 {
-  bottom: 0px;
-}
-.right-6 {
-  right: 1.5rem;
+.top-\[106\%\] {
+  top: 106%;
 }
 .z-10 {
   z-index: 10;
@@ -863,9 +842,6 @@ select {
 .bg-secondary {
   --tw-bg-opacity: 1;
   background-color: rgb(240 240 240 / var(--tw-bg-opacity));
-}
-.bg-opacity-60 {
-  --tw-bg-opacity: 0.6;
 }
 .object-cover {
   -o-object-fit: cover;
@@ -1146,19 +1122,14 @@ select {
   top: 121px;
 }
 
-.before\:h-\[2px\]::before {
+.before\:h-\[4px\]::before {
   content: var(--tw-content);
-  height: 2px;
+  height: 4px;
 }
 
 .before\:h-\[1px\]::before {
   content: var(--tw-content);
   height: 1px;
-}
-
-.before\:h-\[4px\]::before {
-  content: var(--tw-content);
-  height: 4px;
 }
 
 .before\:w-full::before {
@@ -1414,16 +1385,20 @@ select {
     width: 4rem;
   }
 
+  .lg\:w-\[307px\] {
+    width: 307px;
+  }
+
   .lg\:w-3\/12 {
     width: 25%;
   }
 
-  .lg\:w-\[\] {
-    width: ;
+  .lg\:w-\[px\] {
+    width: px;
   }
 
-  .lg\:w-\[307px\] {
-    width: 307px;
+  .lg\:w-\[250px\] {
+    width: 250px;
   }
 
   .lg\:flex-row-reverse {
@@ -1593,6 +1568,10 @@ select {
 
   .xl\:w-\[288px\] {
     width: 288px;
+  }
+
+  .xl\:w-\[307px\] {
+    width: 307px;
   }
 
   .xl\:px-3 {

@@ -7,10 +7,7 @@
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #fff;
-  @media (min-width:991px) {
-    width: 306px !important;
-  }
+  background: transparent;
 
   /* Center slide text vertically */
   display: -webkit-box;
@@ -61,16 +58,15 @@
   }
 }
 
-
 @media (min-width:991px) {
   .swiper-slide{
-    width: 29.61111% !important;
+    width: 30.61111% !important;
   }
   .swiper-slide-next{
-    width: 49.07407% !important;
+    width: 50.07407% !important;
   }
   .swiper-slide-active{
-    width: 29.61111% !important;
+    width: 30.61111% !important;
   }
 }
 
