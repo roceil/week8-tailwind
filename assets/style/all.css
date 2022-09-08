@@ -1385,20 +1385,12 @@ select {
     width: 4rem;
   }
 
-  .lg\:w-\[307px\] {
-    width: 307px;
+  .lg\:w-\[250px\] {
+    width: 250px;
   }
 
   .lg\:w-3\/12 {
     width: 25%;
-  }
-
-  .lg\:w-\[px\] {
-    width: px;
-  }
-
-  .lg\:w-\[250px\] {
-    width: 250px;
   }
 
   .lg\:flex-row-reverse {
@@ -1566,12 +1558,12 @@ select {
     margin-right: -0.75rem;
   }
 
-  .xl\:w-\[288px\] {
-    width: 288px;
-  }
-
   .xl\:w-\[307px\] {
     width: 307px;
+  }
+
+  .xl\:w-\[288px\] {
+    width: 288px;
   }
 
   .xl\:px-3 {
