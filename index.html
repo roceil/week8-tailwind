@@ -1,185 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>首頁</title>
-    <!-- css -->
-    <link rel="stylesheet" href="./assets/style/all.css" />
-    <link rel="stylesheet" href="assets/style/style.css">
 
-    <!--外部字型 -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Squada+One&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>
+    首頁
+  </title>
+  <!-- css -->
+  <link rel="stylesheet" href="./assets/style/all.css" />
+  <link rel="stylesheet" href="assets/style/style.css" />
 
-    <!-- font_awesome -->
-    <script
-      src="https://kit.fontawesome.com/8418f44bd9.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
+  <!--外部字型 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Squada+One&display=swap"
+    rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet" />
 
-  <body>
-    <header class="py-4 md:py-0 md:border-b">
-      <!-- 手機版header -->
-      <div class="container flex justify-between items-center md:hidden">
-        <a href="index.html"
-          ><img
-            class="w-[85px]"
-            src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week8-202207/logo.svg"
-            alt="art_nft"
-        /></a>
-        <div class="flex">
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
+  <!-- font_awesome -->
+  <script src="https://kit.fontawesome.com/8418f44bd9.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header class="py-4 md:py-0 md:border-b ">
+    <!-- 手機版header -->
+    <div class="container flex justify-between items-center md:hidden">
+      <a href="index.html"><img class="w-[85px]"
+          src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week8-202207/logo.svg"
+          alt="art_nft" /></a>
+      <div class="flex">
+        <button>
+          <i class="fa-solid fa-magnifying-glass text-lg mr-6"></i>
+        </button>
+        <button>
+          <i class="fa-solid fa-bars text-lg cursor-pointer"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- 電腦版header -->
+    <div class="hidden container justify-between items-center md:flex">
+      <a href="index.html"><img
+          src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week8-202207/logo.svg"
+          alt="art_nft" /></a>
+      <div class="flex">
+        <!-- 文字搜尋欄 -->
+        <div class="flex items-center px-6 py-10 border-l xl:px-12">
+          <p class="text-gray xl:w-[288px]">搜尋作品名稱、藝術家名稱</p>
           <button>
-            <i class="fa-solid fa-magnifying-glass text-lg mr-6"></i>
-          </button>
-          <button>
-            <i class="fa-solid fa-bars text-lg cursor-pointer"></i>
+            <i class="fa-solid fa-magnifying-glass text-2xl ml-6"></i>
           </button>
         </div>
+        <!-- 探索鈕  -->
+        <a href="discovery.html" class="ring-1 ring-black px-6 py-10 font-bold xl:px-12">探索</a>
+        <!-- 市值鈕  -->
+        <a href="#" class="border-l px-6 py-10 font-bold xl:px-12">市值</a>
+        <!-- 錢包鈕  -->
+        <a href="#" class="border-l px-6 py-10 xl:px-12"><i class="fa-solid fa-wallet text-2xl"></i></a>
       </div>
+    </div>
+  </header>
 
-      <!-- 電腦版header -->
-      <div class="hidden container justify-between items-center md:flex">
-        <a href="index.html"
-          ><img
-            src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week8-202207/logo.svg"
-            alt="art_nft"
-        /></a>
-        <div class="flex">
-          <!-- 文字搜尋欄 -->
-          <div class="flex items-center px-6 py-10 border-l xl:px-12">
-            <p class="text-gray xl:w-[288px]">搜尋作品名稱、藝術家名稱</p>
-            <button>
-              <i class="fa-solid fa-magnifying-glass text-2xl ml-6"></i>
-            </button>
-          </div>
-          <!-- 探索鈕  -->
-          <a href="#" class="border-l px-6 py-10 font-bold xl:px-12">探索</a>
-          <!-- 市值鈕  -->
-          <a href="#" class="border-l px-6 py-10 font-bold xl:px-12">市值</a>
-          <!-- 錢包鈕  -->
-          <a href="#" class="border-l px-6 py-10 xl:px-12"><i class="fa-solid fa-wallet text-2xl"></i></a>
-        </div>
-      </div>
-    </header>
-
-    
-<main>
+  
+<main class="">
   <section class="recommend lg:mt-10">
-      <ul class="">
-        <div class="lg:container lg:flex lg:flex-wrap items-stretch">
-<!-- 01 -->
-<li class=" lg:w-full">
-  <div class="">
-    <div class="border-t border-b lg:flex lg:border">
-      <!-- 標題區域 -->
-    <div class="hidden bg-black text-white writing_lr px-6 pt-24 pb-[137px] justify-center items-center lg:flex">
-      <h2 class="squada text-5xl leading-[1.04166] mb-4">Recommend</h2>
-      <p class="text-xl leading-[1.3]">推 薦 系 列</p>
-    </div>
+    <ul class="">
+      <div class="lg:container lg:flex lg:flex-wrap items-stretch">
+        <!-- 01 -->
+        <li class="lg:w-full">
+          <div class="">
+            <div class="border-t-2 border-b ring-black lg:flex lg:border-0 lg:ring-1 lg:ring-black">
+              <!-- 標題區域 -->
+              <div
+                class="hidden bg-black text-white writing_lr px-6 pt-24 pb-[137px] justify-center items-center lg:flex">
+                <h2 class="squada text-5xl leading-[1.04166] mb-4">
+                  Recommend
+                </h2>
+                <p class="text-xl leading-[1.3]">推 薦 系 列</p>
+              </div>
 
-    <!-- 圖片區域 -->
-    <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week8-202207/art01.jpg" alt="瞳孔:流動的脈絡" class="w-full lg:w-7/12">
+              <!-- 圖片區域 -->
+              <img
+                src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week8-202207/art01.jpg"
+                alt="瞳孔:流動的脈絡" class="w-full lg:w-7/12 object-cover object-center" />
 
-    <!-- 文字區域 -->
-    <div class=" bg-white px-3 py-8 lg:px-6 lg:pt-20 lg:pb-6 lg:flex lg:flex-col lg:justify-between">
-      <div class="">
-        <p class="squada text-lg mb-2">Kemus Wu</p>
-        <h3 class="text-2xl leading-[1.45833] font-bold mb-6 lg:text-[32px] xl:text-5xl xl:leading-[1.45833]">瞳孔:流動的脈絡</h3>
-        <p class="mb-6 lg:mb-0">眼睛，總是吸引著我們的注意力，看、被看，也許眼睛裡有著從另一個世界看我們的世界。</p>
+              <!-- 文字區域 -->
+              <div class="bg-white px-3 py-8 lg:px-6 lg:pt-20 lg:pb-6 lg:flex lg:flex-col lg:justify-between">
+                <div class="">
+                  <p class="squada text-lg mb-2">Kemus Wu</p>
+                  <h3 class="text-2xl leading-[1.45833] font-bold mb-6 lg:text-[32px] xl:text-5xl xl:leading-[1.45833]">
+                    瞳孔:流動的脈絡
+                  </h3>
+                  <p class="mb-6 lg:mb-0">
+                    眼睛，總是吸引著我們的注意力，看、被看，也許眼睛裡有著從另一個世界看我們的世界。
+                  </p>
+                </div>
+
+                <!-- 按鈕 -->
+                <div class="relative group">
+                  <div class="triangle lg:group-hover:border-black"></div>
+                  <a href="#"
+                    class="btn btn-white transition duration-300 lg:group-hover:bg-primary lg:group-hover:text-white">MORE</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- 02 -->
+        <li class="w-full lg:w-1/2 h-auto">
+          <div class="border-t border-b ring-black lg:flex lg:border-0 lg:ring-1 lg:ring-black lg:flex-row-reverse">
+            <!-- 圖片區域 -->
+            <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week8-202207/art02.jpg"
+              alt="海洋波度" class="w-full lg:w-1/2 lg:h-[340px]" />
+
+            <!-- 文字區域 -->
+            <div class="bg-white px-3 py-8 lg:pt-8 lg:pb-6 lg:px-6 lg:flex lg:flex-col lg:justify-between lg:w-1/2">
+              <div class="">
+                <p class="squada text-lg mb-2">Joanne</p>
+                <h3 class="text-2xl leading-[1.45833] font-bold mb-6 lg:text-[32px] lg:leading-[1.4375]">
+                  海洋波度
+                </h3>
+                <p class="mb-6 lg:mb-0">
+                  海洋的奧秘向我們揭示了深不可測的一面，它的深度——反映了我們的恐懼、同時也吸引著我們。
+                </p>
+              </div>
+
+              <!-- 按鈕 -->
+              <div class="relative group">
+                <div class="triangle lg:group-hover:border-black"></div>
+                <a href="#"
+                  class="btn btn-white transition duration-300 lg:group-hover:bg-primary lg:group-hover:text-white">MORE</a>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- 03 -->
+        <li class="w-full lg:w-1/2 h-auto">
+          <div class="border-t border-b-2 ring-black lg:flex lg:border-0 lg:ring-1 lg:flex-row-reverse">
+            <!-- 圖片區域 -->
+            <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week8-202207/art21.jpg"
+              alt="我家窗前的鳥" class="w-full lg:w-1/2 lg:h-[340px]" />
+
+            <!-- 文字區域 -->
+            <div class="bg-white px-3 py-8 lg:pt-8 lg:pb-6 lg:px-6 lg:flex lg:flex-col lg:justify-between lg:w-1/2">
+              <div class="">
+                <p class="squada text-lg mb-2">Michael</p>
+                <h3 class="text-2xl leading-[1.45833] font-bold mb-6 lg:text-[32px] lg:leading-[1.4375]">
+                  我家窗前的鳥
+                </h3>
+                <p class="mb-6 lg:mb-0">
+                  家門前每天都有不同的小鳥，大多數的小鳥都有特殊能力，特殊能力是什麼我就不說了，希望大家能從作品感受到小鳥的快樂。
+                </p>
+              </div>
+
+              <!-- 按鈕 -->
+              <div class="relative group">
+                <div class="triangle lg:group-hover:border-black"></div>
+                <a href="#"
+                  class="btn btn-white transition duration-300 lg:group-hover:bg-primary lg:group-hover:text-white">MORE</a>
+              </div>
+            </div>
+          </div>
+        </li>
       </div>
-
-    <!-- 按鈕 -->
-      <div class="relative group">
-        <div class="triangle lg:group-hover:border-black"></div>
-        <a href="#" class="btn btn-white transition duration-300 lg:group-hover:bg-primary lg:group-hover:text-white">MORE</a>
-      </div>
-    </div>
-    </div>
-  </div>
-</li>
-
-<!-- 02 -->
-<li class="w-full lg:w-1/2 h-auto">
-    <div class="border-t border-b lg:flex lg:border lg:flex-row-reverse">
-    <!-- 圖片區域 -->
-    <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week8-202207/art02.jpg" alt="海洋波度" class="w-full lg:w-1/2 lg:h-[340px]">
-
-    <!-- 文字區域 -->
-    <div class=" bg-white px-3 py-8 lg:pt-8 lg:pb-6 lg:px-6 lg:flex lg:flex-col lg:justify-between lg:w-1/2">
-      <div class="">
-        <p class="squada text-lg mb-2">Joanne</p>
-        <h3 class="text-2xl leading-[1.45833] font-bold mb-6 lg:text-[32px] lg:leading-[1.4375] ">海洋波度</h3>
-        <p class="mb-6 lg:mb-0">海洋的奧秘向我們揭示了深不可測的一面，它的深度——反映了我們的恐懼、同時也吸引著我們。</p>
-      </div>
-
-    <!-- 按鈕 -->
-      <div class="relative group">
-        <div class="triangle lg:group-hover:border-black"></div>
-        <a href="#" class="btn btn-white transition duration-300 lg:group-hover:bg-primary lg:group-hover:text-white">MORE</a>
-      </div>
-    </div>
-    </div>
-</li>
-
-<!-- 03 -->
-<li class="w-full lg:w-1/2 h-auto">
-    <div class="border-t border-b lg:flex lg:border lg:flex-row-reverse">
-    <!-- 圖片區域 -->
-    <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week8-202207/art21.jpg" alt="我家窗前的鳥" class="w-full lg:w-1/2 lg:h-[340px]">
-
-    <!-- 文字區域 -->
-    <div class=" bg-white px-3 py-8 lg:pt-8 lg:pb-6 lg:px-6 lg:flex lg:flex-col lg:justify-between lg:w-1/2">
-      <div class="">
-        <p class="squada text-lg mb-2">Michael</p>
-        <h3 class="text-2xl leading-[1.45833] font-bold mb-6 lg:text-[32px] lg:leading-[1.4375]">我家窗前的鳥</h3>
-        <p class="mb-6 lg:mb-0">家門前每天都有不同的小鳥，大多數的小鳥都有特殊能力，特殊能力是什麼我就不說了，希望大家能從作品感受到小鳥的快樂。</p>
-      </div>
-
-    <!-- 按鈕 -->
-      <div class="relative group">
-        <div class="triangle lg:group-hover:border-black"></div>
-        <a href="#" class="btn btn-white transition duration-300 lg:group-hover:bg-primary lg:group-hover:text-white">MORE</a>
-      </div>
-    </div>
-    </div>
-</li>
-        </div>
-      </ul>
+    </ul>
   </section>
-  <section class="ranking mt-10">
+
+  <section class="ranking mt-10 lg:mt-20">
     <div class="container">
       <div class="flex justify-between border-b mb-6">
-        <h2 class="squada text-[32px] leading-[1.0625] mb-2">Ranking</h2>
+        <!-- 文字區塊 -->
+        <div class="lg:mb-4">
+          <h2 class="h2 inline lg:text-5xl leading-[1.04166]">Ranking</h2>
+          <span class="hidden text-xl leading-[1.45] font-bold ml-4 lg:inline">市價排行榜</span>
+        </div>
+        <!-- 文字區塊 -->
         <!-- 按鈕區塊 -->
         <div class="relative group">
           <div class="triangle lg:group-hover:border-black"></div>
-          <a href="#" class="btn btn-no-border mt-2 transition duration-300 lg:group-hover:bg-primary lg:group-hover:text-white ">MORE</a>
+          <a href="#"
+            class="btn btn-no-border mt-2 transition duration-300 lg:group-hover:bg-primary lg:group-hover:text-white lg:mt-8">MORE</a>
         </div>
+        <!-- 按鈕區塊 -->
       </div>
-      <ul>
+      <ul class="lg:flex lg:flex-wrap lg:-mx-3">
         <!-- 01 -->
-        <li class="mb-4">
-          <div class="bg-white flex">
-            <p class="paytone border px-2 py-6 text-2xl flex justify-center items-center">1</p>
-            <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week8-202207/art04.jpg" alt="散步遇到的女人" class="border w-[87px]">
-            <div class="w-full flex flex-col items-stretch">
-              <div class="py-4 px-2 border">
-                <p class="text-lg leading-[1.44444] font-bold">散步遇到的女人</p>
+        <li class="mb-4 lg:w-4/12 lg:px-3">
+          <div class="bg-white flex lg:flex-col lg:relative group">
+            <!-- 按鈕 -->
+            <div class="absolute bottom-[117px] right-[1px] hidden group-hover:block">
+              <div class="relative group">
+                <div class="triangle lg:group-hover:border-black border-b-0"></div>
+                <a href="#"
+                  class="btn btn-white border-b-0 lg:group-hover:bg-primary lg:group-hover:text-white">MORE</a>
               </div>
-              <div class="px-2 py-3 flex justify-between border">
+            </div>
+            <!-- 編號 -->
+            <p
+              class="paytone w-[38px] leading-none border px-2 py-6 text-2xl flex justify-center items-center lg:absolute lg:top-0 lg:left-0 lg:bg-white lg:w-16 lg:h-16">
+              1
+            </p>
+            <!-- 圖片區域 -->
+            <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week8-202207/art04.jpg"
+              alt="散步遇到的女人"
+              class="pic-1 border border-r-0 border-l-0 object-cover object-top w-[87px] lg:h-[374px] lg:w-full lg:border lg:border-b-0" />
+            <div class="w-full flex flex-col items-stretch">
+              <!-- 標題區域 -->
+              <div class="py-4 px-2 border border-b-0">
+                <h3 class="text-lg leading-[1.44444] font-bold">
+                  散步遇到的女人
+                </h3>
+              </div>
+              <!-- 作者＆價格區域 -->
+              <div class="px-2 py-4 flex justify-between border">
                 <p class="squada">Zoe Jiang</p>
-                <div class="flex">
-                  <img src="" alt="">
+                <div class="flex justify-center items-center">
+                  <i class="fa-brands fa-ethereum mr-2"></i>
                   <p class="squada">300</p>
                 </div>
               </div>
@@ -188,18 +233,160 @@
         </li>
 
         <!-- 02 -->
-        <li class="mb-4">
-          <div class="bg-white flex">
-            <p class="paytone border px-2 py-6 text-2xl flex justify-center items-center">2</p>
-            <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week8-202207/art05.jpg" alt="爆炸頭的母親" class="border w-[87px] object-cover">
-            <div class="w-full flex flex-col items-stretch">
-              <div class="py-4 px-2 border">
-                <p class="text-lg leading-[1.44444] font-bold">爆炸頭的母親</p>
+        <li class="mb-4 lg:w-4/12 lg:px-3">
+          <div class="bg-white flex lg:flex-col lg:relative group">
+            <!-- 按鈕 -->
+            <div class="absolute bottom-[117px] right-[1px] hidden group-hover:block">
+              <div class="relative group">
+                <div class="triangle lg:group-hover:border-black"></div>
+                <a href="#" class="btn btn-white lg:group-hover:bg-primary lg:group-hover:text-white">MORE</a>
               </div>
-              <div class="px-2 py-3 flex justify-between border">
+            </div>
+            <!-- 編號 -->
+            <p
+              class="paytone w-[38px] leading-none border px-2 py-6 text-2xl flex justify-center items-center lg:absolute lg:top-0 lg:left-0 lg:bg-white lg:w-16 lg:h-16">
+              2
+            </p>
+            <!-- 圖片區域 -->
+            <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week8-202207/art05.jpg"
+              alt="爆炸頭的母親"
+              class="pic-1 border border-r-0 border-l-0 object-cover object-top w-[87px] lg:h-[374px] lg:w-full lg:border lg:border-b-0" />
+            <div class="w-full flex flex-col items-stretch">
+              <!-- 標題區域 -->
+              <div class="py-4 px-2 border border-b-0">
+                <h3 class="text-lg leading-[1.44444] font-bold">
+                  爆炸頭的母親
+                </h3>
+              </div>
+              <!-- 作者＆價格區域 -->
+              <div class="px-2 py-4 flex justify-between border">
                 <p class="squada">Yui</p>
-                <div class="flex">
-                  <img src="" alt="">
+                <div class="flex justify-center items-center">
+                  <i class="fa-brands fa-ethereum mr-2"></i>
+                  <p class="squada">300</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- 03 -->
+        <li class="mb-4 lg:w-4/12 lg:px-3">
+          <div class="bg-white flex lg:flex-col lg:relative group">
+            <!-- 按鈕 -->
+            <div class="absolute bottom-[117px] right-[1px] hidden group-hover:block">
+              <div class="relative group">
+                <div class="triangle lg:group-hover:border-black"></div>
+                <a href="#" class="btn btn-white lg:group-hover:bg-primary lg:group-hover:text-white">MORE</a>
+              </div>
+            </div>
+            <!-- 編號 -->
+            <p
+              class="paytone w-[38px] leading-none border px-2 py-6 text-2xl flex justify-center items-center lg:absolute lg:top-0 lg:left-0 lg:bg-white lg:w-16 lg:h-16">
+              3
+            </p>
+            <!-- 圖片區域 -->
+            <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week8-202207/art06.jpg"
+              alt="夏天的時候"
+              class="pic-1 border border-r-0 border-l-0 object-cover object-top w-[87px] lg:h-[374px] lg:w-full lg:border lg:border-b-0" />
+            <div class="w-full flex flex-col items-stretch">
+              <!-- 標題區域 -->
+              <div class="py-4 px-2 border border-b-0">
+                <h3 class="text-lg leading-[1.44444] font-bold">夏天的時候</h3>
+              </div>
+              <!-- 作者＆價格區域 -->
+              <div class="px-2 py-4 flex justify-between border">
+                <p class="squada">Bug Lin</p>
+                <div class="flex justify-center items-center">
+                  <i class="fa-brands fa-ethereum mr-2"></i>
+                  <p class="squada">300</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- 04 -->
+        <li class="mb-4 lg:w-4/12 lg:px-3">
+          <div class="bg-white flex">
+            <!-- 編號 -->
+            <p
+              class="paytone w-[38px] leading-none border px-2 py-6 text-2xl flex justify-center items-center lg:px-4 lg:py-0">
+              4
+            </p>
+            <!-- 圖片區域 -->
+            <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week8-202207/art13.jpg"
+              alt="爆炸頭的母親" class="border border-r-0 border-l-0 w-[87px] object-cover" />
+            <div class="w-full flex flex-col items-stretch">
+              <!-- 標題區域 -->
+              <div class="py-4 px-2 border border-b-0">
+                <p class="text-lg leading-[1.44444] font-bold">
+                  追求者送我的花
+                </p>
+              </div>
+              <!-- 作者＆價格區域 -->
+              <div class="px-2 py-4 flex justify-between border">
+                <p class="squada">Michael</p>
+                <div class="flex justify-center items-center">
+                  <i class="fa-brands fa-ethereum mr-2"></i>
+                  <p class="squada">300</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- 05 -->
+        <li class="mb-4 lg:w-4/12 lg:px-3">
+          <div class="bg-white flex">
+            <!-- 編號 -->
+            <p
+              class="paytone w-[38px] leading-none border px-2 py-6 text-2xl flex justify-center items-center lg:px-4 lg:py-0">
+              5
+            </p>
+            <!-- 圖片區域 -->
+            <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week8-202207/art07.jpg"
+              alt="今天釣到的魚" class="border border-r-0 border-l-0 w-[87px] object-cover" />
+            <div class="w-full flex flex-col items-stretch">
+              <!-- 標題區域 -->
+              <div class="py-4 px-2 border border-b-0">
+                <p class="text-lg leading-[1.44444] font-bold">今天釣到的魚</p>
+              </div>
+              <!-- 作者＆價格區域 -->
+              <div class="px-2 py-4 flex justify-between border">
+                <p class="squada">Wei JJ</p>
+                <div class="flex justify-center items-center">
+                  <i class="fa-brands fa-ethereum mr-2"></i>
+                  <p class="squada">300</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- 06 -->
+        <li class="mb-4 lg:w-4/12 lg:px-3">
+          <div class="bg-white flex">
+            <!-- 編號 -->
+            <p
+              class="paytone w-[38px] leading-none border px-2 py-6 text-2xl flex justify-center items-center lg:px-4 lg:py-0">
+              6
+            </p>
+            <!-- 圖片區域 -->
+            <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week8-202207/art08.jpg"
+              alt="人生中的貓咪們" class="border border-r-0 border-l-0 w-[87px] object-cover" />
+            <div class="w-full flex flex-col items-stretch">
+              <!-- 標題區域 -->
+              <div class="py-4 px-2 border border-b-0">
+                <p class="text-lg leading-[1.44444] font-bold">
+                  人生中的貓咪們
+                </p>
+              </div>
+              <!-- 作者＆價格區域 -->
+              <div class="px-2 py-4 flex justify-between border">
+                <p class="squada">Even Lai</p>
+                <div class="flex justify-center items-center">
+                  <i class="fa-brands fa-ethereum mr-2"></i>
                   <p class="squada">300</p>
                 </div>
               </div>
@@ -209,13 +396,640 @@
       </ul>
     </div>
   </section>
+
+  <!-- swiper區塊暫時放棄 -->
+  <section class="artist mt-10 lg:mt-20">
+    <div class="container">
+      <!-- 標題區塊 -->
+      <div class="flex justify-between border-b mb-6">
+        <div class="">
+          <h2 class="h2 inline lg:text-5xl leading-[1.04166] ">Artist</h2>
+          <span class="hidden text-xl leading-[1.45] font-bold ml-4 lg:inline">熱門藝術家</span>
+
+        </div>
+        <!-- 標題按鈕區塊 -->
+        <div class="relative group">
+          <div class="triangle lg:group-hover:border-black"></div>
+          <a href="#"
+            class="btn btn-no-border mt-2 transition duration-300 lg:group-hover:bg-primary lg:group-hover:text-white lg:mt-8">MORE</a>
+        </div>
+      </div>
+      <!-- 標題區塊 end -->
+
+      <!-- swiper區塊 -->
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <!-- 01 -->
+          <div class="swiper-slide flex-col">
+            <div class="relative bg-secondary">
+              <h3 class="squada z-10 text-[32px] leading-[1.0625] absolute top-6 left-6 text-white lg:hidden display">
+                Antony Wu
+              </h3>
+              <!-- 按鈕 -->
+              <div class="absolute z-10 bottom-6 right-2 lg:hidden display">
+                <div class="relative group">
+                  <div class="triangle lg:group-hover:border-black border-b-0"></div>
+                  <a href="#"
+                    class="btn btn-white border-b-0 lg:group-hover:bg-primary lg:group-hover:text-white">MORE</a>
+                </div>
+              </div>
+              <!-- 圖片 -->
+              <img
+                src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week8-202207/artist01.jpg"
+                alt="" class="mb-4 display lg:grayscale" />
+              <!-- 電腦版圖片下方文字 -->
+              <div class="hidden z-10 bg-white text-base p-6 text-left top-[106%] display">
+                ​喜愛大自然，創作題材常見大山、大水、花草與樹木。
+              </div>
+            </div>
+            <!-- 手機版圖片下方文字 -->
+            <div class="bg-white text-base p-6 text-left top-[106%] lg:hidden">
+              ​喜愛大自然，創作題材常見大山、大水、花草與樹木。
+            </div>
+          </div>
+          <!-- 02 -->
+          <div class="swiper-slide flex-col">
+            <div class="relative bg-secondary">
+              <h3 class="squada z-10 text-[32px] leading-[1.0625] absolute top-6 left-6 text-white lg:hidden display">
+                Antony Wu
+              </h3>
+              <!-- 按鈕 -->
+              <div class="absolute z-10 bottom-6 right-2 lg:hidden display">
+                <div class="relative group">
+                  <div class="triangle lg:group-hover:border-black border-b-0"></div>
+                  <a href="#"
+                    class="btn btn-white border-b-0 lg:group-hover:bg-primary lg:group-hover:text-white">MORE</a>
+                </div>
+              </div>
+              <!-- 圖片 -->
+              <img
+                src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week8-202207/artist02.jpg"
+                alt="" class="mb-4 display lg:grayscale" />
+              <!-- 電腦版圖片下方文字 -->
+              <div class="hidden z-10 bg-white text-base p-6 text-left top-[106%] display">
+                ​喜愛大自然，創作題材常見大山、大水、花草與樹木。
+              </div>
+            </div>
+            <!-- 手機版圖片下方文字 -->
+            <div class="bg-white text-base p-6 text-left top-[106%] lg:hidden">
+              ​喜愛大自然，創作題材常見大山、大水、花草與樹木。
+            </div>
+          </div>
+          <!-- 03 -->
+          <div class="swiper-slide flex-col">
+            <div class="relative bg-secondary group">
+              <h3 class="squada z-10 text-[32px] leading-[1.0625] absolute top-6 left-6 text-white lg:hidden display">
+                Antony Wu
+              </h3>
+              <!-- 按鈕 -->
+              <div class="absolute z-10 bottom-6 right-2 lg:hidden display">
+                <div class="relative group">
+                  <div class="triangle lg:group-hover:border-black border-b-0"></div>
+                  <a href="#"
+                    class="btn btn-white border-b-0 lg:group-hover:bg-primary lg:group-hover:text-white">MORE</a>
+                </div>
+              </div>
+              <!-- 圖片 -->
+              <img
+                src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week8-202207/artist05.jpg"
+                alt="" class="mb-4 display lg:grayscale" />
+              <!-- 電腦版圖片下方文字 -->
+              <div class="hidden z-10 bg-white text-base p-6 text-left top-[106%] display">
+                ​喜愛大自然，創作題材常見大山、大水、花草與樹木。 電腦版
+              </div>
+            </div>
+            <!-- 手機版圖片下方文字 -->
+            <div class="bg-white text-base p-6 text-left top-[106%] lg:hidden">
+              ​喜愛大自然，創作題材常見大山、大水、花草與樹木。手機版
+            </div>
+          </div>
+          <!-- 04 -->
+          <div class="swiper-slide flex-col">
+            <div class="relative bg-secondary group">
+              <h3 class="squada z-10 text-[32px] leading-[1.0625] absolute top-6 left-6 text-white lg:hidden display">
+                Antony Wu
+              </h3>
+              <!-- 按鈕 -->
+              <div class="absolute z-10 bottom-6 right-2 lg:hidden display">
+                <div class="relative group">
+                  <div class="triangle lg:group-hover:border-black border-b-0"></div>
+                  <a href="#"
+                    class="btn btn-white border-b-0 lg:group-hover:bg-primary lg:group-hover:text-white">MORE</a>
+                </div>
+              </div>
+              <!-- 圖片 -->
+              <img
+                src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week8-202207/artist04.jpg"
+                alt="" class="mb-4 display lg:grayscale" />
+              <!-- 電腦版圖片下方文字 -->
+              <div class="hidden z-10 bg-white text-base p-6 text-left top-[106%] display">
+                ​喜愛大自然，創作題材常見大山、大水、花草與樹木。 電腦版
+              </div>
+            </div>
+            <!-- 手機版圖片下方文字 -->
+            <div class="bg-white text-base p-6 text-left top-[106%] lg:hidden">
+              ​喜愛大自然，創作題材常見大山、大水、花草與樹木。手機版
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+      <!-- swiper區塊 end -->
+    </div>
+  </section>
+
+  <section class="artwork mt-10 lg:mt-20">
+    <div class="container">
+      <div class="flex justify-between border-b mb-6">
+        <div class="">
+          <h2 class="h2 inline lg:text-5xl leading-[1.04166] ">Artwork</h2>
+          <span class="hidden text-xl leading-[1.45] font-bold ml-4 lg:inline">最新藝術品</span>
+
+        </div>
+        <!-- 按鈕區塊 start -->
+        <div class="relative group">
+          <div class="triangle lg:group-hover:border-black"></div>
+          <a href="#"
+            class="btn btn-no-border mt-2 transition duration-300 lg:group-hover:bg-primary lg:group-hover:text-white lg:mt-8">MORE</a>
+        </div>
+        <!-- 按鈕區塊 end -->
+      </div>
+      <!-- 瀑布流 start -->
+      <div class="grid">
+        <!-- width of .grid-sizer used for columnWidth -->
+        <div class="grid-sizer"></div>
+        <!-- 01 區塊戀-他的私生活 -->
+        <div class="grid-item mb-4 lg:mb-12">
+          <div class="bg-white p-2 lg:p-6">
+            <div class="relative group">
+              <!-- 圖片區塊 -->
+              <a href="#"><img
+                  src="https://github.com/hexschool/2022-web-layout-training/blob/main/week8-202207/art09.jpg?raw=true"
+                  alt="區塊戀-他的私生活" class="img-fluid "></a>
+              <!-- 圖片區塊 -->
+              <!-- 灰色遮罩 -->
+              <div
+                class="hidden absolute top-0 left-0 w-full h-full bg-black opacity-0 transition duration-500 lg:block group-hover:opacity-50">
+              </div>
+              <!-- 灰色遮罩 -->
+              <!-- 遮罩文字 -->
+              <div
+                class="hidden absolute top-0 left-0  text-white opacity-0 transition duration-500  group-hover:opacity-100 p-4 h-full lg:block">
+                <div class="p-4 border h-full flex flex-col justify-between">
+                  <div class="">
+                    <!-- 文字區塊 -->
+                    <p class="mb-2">唯一想擁有的人，唯一不可以擁有的</p>
+                    <!-- 文字區塊 -->
+                    <!-- 價格區塊 -->
+                    <div class="flex items-center">
+                      <i class="fa-brands fa-ethereum mr-2"></i>
+                      <p class="squada">300</p>
+                    </div>
+                    <!-- 價格區塊 -->
+                  </div>
+                  <!-- 按鈕 -->
+                  <div class="relative group">
+                    <div class="triangle border-primary border-b-0"></div>
+                    <a href="#" class="btn btn-white border-b-0 text-black">MORE</a>
+                  </div>
+                  <!-- 按鈕 -->
+                </div>
+              </div>
+              <!-- 遮罩文字 -->
+            </div>
+          </div>
+          <!-- 圖片下方文字 -->
+          <h3 class="py-4 text-center lg:font-bold lg:text-left lg:border-b">區塊戀-他的私生活</h3>
+        </div>
+        <!-- 02 夏娃的醜聞 -->
+        <div class="grid-item mb-4 lg:mb-12">
+          <div class="bg-white p-2 lg:p-6">
+            <div class="relative group">
+              <!-- 圖片區塊 -->
+              <a href="#"><img
+                  src="https://github.com/hexschool/2022-web-layout-training/blob/main/week8-202207/art10.jpg?raw=true"
+                  alt="夏娃的醜聞" class="img-fluid "></a>
+              <!-- 圖片區塊 -->
+              <!-- 灰色遮罩 -->
+              <div
+                class="hidden absolute top-0 left-0 w-full h-full bg-black opacity-0 transition duration-500 lg:block group-hover:opacity-50">
+              </div>
+              <!-- 灰色遮罩 -->
+              <!-- 遮罩文字 -->
+              <div
+                class="hidden absolute top-0 left-0  text-white opacity-0 transition duration-500  group-hover:opacity-100 p-4 h-full lg:block">
+                <div class="p-4 border h-full flex flex-col justify-between">
+                  <div class="">
+                    <!-- 文字區塊 -->
+                    <p class="mb-2">唯一想擁有的人，唯一不可以擁有的</p>
+                    <!-- 文字區塊 -->
+                    <!-- 價格區塊 -->
+                    <div class="flex items-center">
+                      <i class="fa-brands fa-ethereum mr-2"></i>
+                      <p class="squada">300</p>
+                    </div>
+                    <!-- 價格區塊 -->
+                  </div>
+                  <!-- 按鈕 -->
+                  <div class="relative group">
+                    <div class="triangle border-primary border-b-0"></div>
+                    <a href="#" class="btn btn-white border-b-0 text-black">MORE</a>
+                  </div>
+                  <!-- 按鈕 -->
+                </div>
+              </div>
+              <!-- 遮罩文字 -->
+            </div>
+          </div>
+          <!-- 圖片下方文字 -->
+          <h3 class="py-4 text-center lg:font-bold lg:text-left lg:border-b">夏娃的醜聞</h3>
+        </div>
+        <!-- 03 藍色啤酒海 -->
+        <div class="grid-item mb-4 lg:mb-12">
+          <div class="bg-white p-2 lg:p-6">
+            <div class="relative group">
+              <!-- 圖片區塊 -->
+              <a href="#"><img
+                  src="https://github.com/hexschool/2022-web-layout-training/blob/main/week8-202207/art02.jpg?raw=true"
+                  alt="藍色啤酒海" class="img-fluid "></a>
+              <!-- 圖片區塊 -->
+              <!-- 灰色遮罩 -->
+              <div
+                class="hidden absolute top-0 left-0 w-full h-full bg-black opacity-0 transition duration-500 lg:block group-hover:opacity-50">
+              </div>
+              <!-- 灰色遮罩 -->
+              <!-- 遮罩文字 -->
+              <div
+                class="hidden absolute top-0 left-0  text-white opacity-0 transition duration-500  group-hover:opacity-100 p-4 h-full lg:block">
+                <div class="p-4 border h-full flex flex-col justify-between">
+                  <div class="">
+                    <!-- 文字區塊 -->
+                    <p class="mb-2">唯一想擁有的人，唯一不可以擁有的</p>
+                    <!-- 文字區塊 -->
+                    <!-- 價格區塊 -->
+                    <div class="flex items-center">
+                      <i class="fa-brands fa-ethereum mr-2"></i>
+                      <p class="squada">300</p>
+                    </div>
+                    <!-- 價格區塊 -->
+                  </div>
+                  <!-- 按鈕 -->
+                  <div class="relative group">
+                    <div class="triangle border-primary border-b-0"></div>
+                    <a href="#" class="btn btn-white border-b-0 text-black">MORE</a>
+                  </div>
+                  <!-- 按鈕 -->
+                </div>
+              </div>
+              <!-- 遮罩文字 -->
+            </div>
+          </div>
+          <!-- 圖片下方文字 -->
+          <h3 class="py-4 text-center lg:font-bold lg:text-left lg:border-b">藍色啤酒海</h3>
+        </div>
+        <!-- 04 沒有人愛我 -->
+        <div class="grid-item mb-4 lg:mb-12">
+          <div class="bg-white p-2 lg:p-6">
+            <div class="relative group">
+              <!-- 圖片區塊 -->
+              <a href="#"><img
+                  src="https://github.com/hexschool/2022-web-layout-training/blob/main/week8-202207/art11.jpg?raw=true"
+                  alt="沒有人愛我" class="img-fluid "></a>
+              <!-- 圖片區塊 -->
+              <!-- 灰色遮罩 -->
+              <div
+                class="hidden absolute top-0 left-0 w-full h-full bg-black opacity-0 transition duration-500 lg:block group-hover:opacity-50">
+              </div>
+              <!-- 灰色遮罩 -->
+              <!-- 遮罩文字 -->
+              <div
+                class="hidden absolute top-0 left-0  text-white opacity-0 transition duration-500  group-hover:opacity-100 p-4 h-full lg:block">
+                <div class="p-4 border h-full flex flex-col justify-between">
+                  <div class="">
+                    <!-- 文字區塊 -->
+                    <p class="mb-2">唯一想擁有的人，唯一不可以擁有的</p>
+                    <!-- 文字區塊 -->
+                    <!-- 價格區塊 -->
+                    <div class="flex items-center">
+                      <i class="fa-brands fa-ethereum mr-2"></i>
+                      <p class="squada">300</p>
+                    </div>
+                    <!-- 價格區塊 -->
+                  </div>
+                  <!-- 按鈕 -->
+                  <div class="relative group">
+                    <div class="triangle border-primary border-b-0"></div>
+                    <a href="#" class="btn btn-white border-b-0 text-black">MORE</a>
+                  </div>
+                  <!-- 按鈕 -->
+                </div>
+              </div>
+              <!-- 遮罩文字 -->
+            </div>
+          </div>
+          <!-- 圖片下方文字 -->
+          <h3 class="py-4 text-center lg:font-bold lg:text-left lg:border-b">沒有人愛我</h3>
+        </div>
+        <!-- 05 不哭不哭眼淚是珍珠 -->
+        <div class="grid-item mb-4 lg:mb-12">
+          <div class="bg-white p-2 lg:p-6">
+            <div class="relative group">
+              <!-- 圖片區塊 -->
+              <a href="#"><img
+                  src="https://github.com/hexschool/2022-web-layout-training/blob/main/week8-202207/art12.jpg?raw=true"
+                  alt="不哭不哭眼淚是珍珠" class="img-fluid "></a>
+              <!-- 圖片區塊 -->
+              <!-- 灰色遮罩 -->
+              <div
+                class="hidden absolute top-0 left-0 w-full h-full bg-black opacity-0 transition duration-500 lg:block group-hover:opacity-50">
+              </div>
+              <!-- 灰色遮罩 -->
+              <!-- 遮罩文字 -->
+              <div
+                class="hidden absolute top-0 left-0  text-white opacity-0 transition duration-500  group-hover:opacity-100 p-4 h-full lg:block">
+                <div class="p-4 border h-full flex flex-col justify-between">
+                  <div class="">
+                    <!-- 文字區塊 -->
+                    <p class="mb-2">唯一想擁有的人，唯一不可以擁有的</p>
+                    <!-- 文字區塊 -->
+                    <!-- 價格區塊 -->
+                    <div class="flex items-center">
+                      <i class="fa-brands fa-ethereum mr-2"></i>
+                      <p class="squada">300</p>
+                    </div>
+                    <!-- 價格區塊 -->
+                  </div>
+                  <!-- 按鈕 -->
+                  <div class="relative group">
+                    <div class="triangle border-primary border-b-0"></div>
+                    <a href="#" class="btn btn-white border-b-0 text-black">MORE</a>
+                  </div>
+                  <!-- 按鈕 -->
+                </div>
+              </div>
+              <!-- 遮罩文字 -->
+            </div>
+          </div>
+          <!-- 圖片下方文字 -->
+          <h3 class="py-4 text-center lg:font-bold lg:text-left lg:border-b">不哭不哭眼淚是珍珠</h3>
+        </div>
+        <!-- 08 我真的受傷了 -->
+        <div class="grid-item mb-4 lg:mb-12">
+          <div class="bg-white p-2 lg:p-6">
+            <div class="relative group">
+              <!-- 圖片區塊 -->
+              <a href="#"><img
+                  src="https://github.com/hexschool/2022-web-layout-training/blob/main/week8-202207/art27.jpg?raw=true"
+                  alt="我真的受傷了" class="img-fluid "></a>
+              <!-- 圖片區塊 -->
+              <!-- 灰色遮罩 -->
+              <div
+                class="hidden absolute top-0 left-0 w-full h-full bg-black opacity-0 transition duration-500 lg:block group-hover:opacity-50">
+              </div>
+              <!-- 灰色遮罩 -->
+              <!-- 遮罩文字 -->
+              <div
+                class="hidden absolute top-0 left-0  text-white opacity-0 transition duration-500  group-hover:opacity-100 p-4 h-full lg:block">
+                <div class="p-4 border h-full flex flex-col justify-between">
+                  <div class="">
+                    <!-- 文字區塊 -->
+                    <p class="mb-2">唯一想擁有的人，唯一不可以擁有的</p>
+                    <!-- 文字區塊 -->
+                    <!-- 價格區塊 -->
+                    <div class="flex items-center">
+                      <i class="fa-brands fa-ethereum mr-2"></i>
+                      <p class="squada">300</p>
+                    </div>
+                    <!-- 價格區塊 -->
+                  </div>
+                  <!-- 按鈕 -->
+                  <div class="relative group">
+                    <div class="triangle border-primary border-b-0"></div>
+                    <a href="#" class="btn btn-white border-b-0 text-black">MORE</a>
+                  </div>
+                  <!-- 按鈕 -->
+                </div>
+              </div>
+              <!-- 遮罩文字 -->
+            </div>
+          </div>
+          <!-- 圖片下方文字 -->
+          <h3 class="py-4 text-center lg:font-bold lg:text-left lg:border-b">我真的受傷了</h3>
+        </div>
+        <!-- 06 十分鐘就到 -->
+        <div class="grid-item mb-4 lg:mb-12">
+          <div class="bg-white p-2 lg:p-6">
+            <div class="relative group">
+              <!-- 圖片區塊 -->
+              <a href="#"><img
+                  src="https://github.com/hexschool/2022-web-layout-training/blob/main/week8-202207/art03.jpg?raw=true"
+                  alt="十分鐘就到" class="img-fluid "></a>
+              <!-- 圖片區塊 -->
+              <!-- 灰色遮罩 -->
+              <div
+                class="hidden absolute top-0 left-0 w-full h-full bg-black opacity-0 transition duration-500 lg:block group-hover:opacity-50">
+              </div>
+              <!-- 灰色遮罩 -->
+              <!-- 遮罩文字 -->
+              <div
+                class="hidden absolute top-0 left-0  text-white opacity-0 transition duration-500  group-hover:opacity-100 p-4 h-full lg:block">
+                <div class="p-4 border h-full flex flex-col justify-between">
+                  <div class="">
+                    <!-- 文字區塊 -->
+                    <p class="">唯一想擁有的人，唯一不可以擁有的</p>
+                    <!-- 文字區塊 -->
+                    <!-- 價格區塊 -->
+                    <div class="flex items-center">
+                      <i class="fa-brands fa-ethereum mr-2"></i>
+                      <p class="squada">300</p>
+                    </div>
+                    <!-- 價格區塊 -->
+                  </div>
+                  <!-- 按鈕 -->
+                  <div class="relative group">
+                    <div class="triangle border-primary border-b-0"></div>
+                    <a href="#" class="btn btn-white border-b-0 text-black">MORE</a>
+                  </div>
+                  <!-- 按鈕 -->
+                </div>
+              </div>
+              <!-- 遮罩文字 -->
+            </div>
+          </div>
+          <!-- 圖片下方文字 -->
+          <h3 class="py-4 text-center lg:font-bold lg:text-left lg:border-b">十分鐘就到</h3>
+        </div>
+        <!-- 07 我這樣有美嗎 -->
+        <div class="grid-item mb-4 lg:mb-12">
+          <div class="bg-white p-2 lg:p-6">
+            <div class="relative group">
+              <!-- 圖片區塊 -->
+              <a href="#"><img
+                  src="https://github.com/hexschool/2022-web-layout-training/blob/main/week8-202207/art04.jpg?raw=true"
+                  alt="我這樣有美嗎" class="img-fluid "></a>
+              <!-- 圖片區塊 -->
+              <!-- 灰色遮罩 -->
+              <div
+                class="hidden absolute top-0 left-0 w-full h-full bg-black opacity-0 transition duration-500 lg:block group-hover:opacity-50">
+              </div>
+              <!-- 灰色遮罩 -->
+              <!-- 遮罩文字 -->
+              <div
+                class="hidden absolute top-0 left-0  text-white opacity-0 transition duration-500  group-hover:opacity-100 p-4 h-full lg:block">
+                <div class="p-4 border h-full flex flex-col justify-between">
+                  <div class="">
+                    <!-- 文字區塊 -->
+                    <p class="mb-2">唯一想擁有的人，唯一不可以擁有的</p>
+                    <!-- 文字區塊 -->
+                    <!-- 價格區塊 -->
+                    <div class="flex items-center">
+                      <i class="fa-brands fa-ethereum mr-2"></i>
+                      <p class="squada">300</p>
+                    </div>
+                    <!-- 價格區塊 -->
+                  </div>
+                  <!-- 按鈕 -->
+                  <div class="relative group">
+                    <div class="triangle border-primary border-b-0"></div>
+                    <a href="#" class="btn btn-white border-b-0 text-black">MORE</a>
+                  </div>
+                  <!-- 按鈕 -->
+                </div>
+              </div>
+              <!-- 遮罩文字 -->
+            </div>
+          </div>
+          <!-- 圖片下方文字 -->
+          <h3 class="py-4 text-center lg:font-bold lg:text-left lg:border-b">我這樣有美嗎</h3>
+        </div>
+        <!-- 瀑布流 end -->
+      </div>
+    </div>
+  </section>
+
+  <section class="Join Us mt-10 relative lg:mt-20 ">
+    <!-- 偽元素線條 -->
+    <div
+      class="before:content-[''] before:w-full before:h-[4px] before:absolute before:top-[110px] before:left-0 before:bg-black">
+    </div>
+    <div
+      class="before:content-[''] before:w-full before:h-[1px] before:absolute before:top-[121px] before:left-0 before:bg-black">
+    </div>
+    <div
+      class="after:content-[''] after:w-full after:h-[1px] after:absolute after:bottom-[-48px] after:left-0 after:bg-black lg:after:bottom-[-80px]">
+    </div>
+    <!-- 偽元素線條 -->
+
+    <div class="container">
+      <div class="-mx-3">
+        <!-- 文字區塊 -->
+        <h2 class="h2 text-center mb-4 lg:text-5xl lg:leading-[1.04166]">Join Us</h2>
+        <p class="text-center font-bold text-xl leading-[1.45] mb-8">創建並出售你的藝術品</p>
+        <!-- 文字區塊 -->
+      </div>
+      <!-- 卡片區塊 -->
+      <ul class="mb-14 lg:flex lg:flex-wrap lg:-mx-2 lg:mb-[88px] lg:mt-32 xl:-mx-3">
+        <!-- 01 創建您的主頁 -->
+        <li class="lg:w-3/12">
+          <div class="pt-12 flex flex-col justify-center items-center text-center lg:px-2 lg:pt-0 xl:px-3">
+            <i class="fa-solid fa-wallet text-[46px] text-primary mb-4"></i>
+            <h2 class="text-lg leading-[1.444] font-bold mb-6">設置你的錢包</h2>
+            <p>設置好您選擇的錢包後<br> 點擊右上角的錢包圖標進行連接</p>
+          </div>
+        </li>
+
+        <!-- 02 創建您的主頁 -->
+        <li class="lg:w-3/12">
+          <div class="pt-12 flex flex-col justify-center items-center text-center lg:px-2 lg:pt-0 xl:px-3">
+            <i class="fa-solid fa-pen-ruler text-[46px] text-primary mb-4"></i>
+            <h2 class="text-lg leading-[1.444] font-bold mb-6">創建您的主頁</h2>
+            <p>註冊成為會員，編輯您的資料<br>讓大家了解你</p>
+          </div>
+        </li>
+
+        <!-- 03 添加你的 NFT -->
+        <li class="lg:w-3/12">
+          <div class="pt-12 flex flex-col justify-center items-center text-center lg:px-2 lg:pt-0 xl:px-3">
+            <i class="fa-solid fa-icons text-[46px] text-primary mb-4"></i>
+            <h2 class="text-lg leading-[1.444] font-bold mb-6">添加你的 NFT</h2>
+            <p>上傳你的作品<br>添加標題和描述</p>
+          </div>
+        </li>
+
+        <!-- 04 列出它們出售 -->
+        <li class="lg:w-3/12">
+          <div class="pt-12 flex flex-col justify-center items-center text-center lg:px-2 lg:pt-0 xl:px-3">
+            <i class="fa-solid fa-tags text-[46px] text-primary mb-4"></i>
+            <h2 class="text-lg leading-[1.444] font-bold mb-6">列出它們出售</h2>
+            <p>選擇出售 NFT 的方式<br>並設定價格，等待有緣人</p>
+          </div>
+        </li>
+      </ul>
+      <!-- 卡片區塊 -->
+    </div>
+  </section>
+
+
+
+
 </main>
 
-
-    <footer class="bg-secondary text-center py-6">
+    <footer class="bg-secondary text-center py-6 border-t-4">
       <p>© ART NFT. All Rights Reserved</p>
     </footer>
+
+
     <script src="./assets/js/vendors.js"></script>
     <script src="./assets/js/all.js"></script>
-  </body>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!-- masonry -->
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        autoplay: {
+          delay: 2000,
+        },
+        breakpoints: {
+          // when window width is >= 320px
+          375: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          // when window width is >= 640px
+          991: {
+            slidesPerView: 3,
+            spaceBetween: 24,
+          },
+        },
+      });
+      // images_loaded
+
+      // init Masonry
+      var $grid = $(".grid").masonry({
+        // options...
+      });
+      // layout Masonry after each image loads
+      $grid.imagesLoaded().progress(function () {
+        $grid.masonry("layout");
+      });
+      // masonry
+      $(".grid").masonry({
+        // set itemSelector so .grid-sizer is not used in layout
+        itemSelector: ".grid-item",
+        // use element for option
+        columnWidth: ".grid-sizer",
+        percentPosition: true,
+      });
+    </script>
+</body>
+
 </html>
